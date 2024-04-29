@@ -50,11 +50,7 @@ Get Official MLPerf ResNet50 Model
             Run Command
 
             ```bash
-            cm run script --tags=run-mlperf,inference \
-               --model=resnet50 \
-               --implementation=reference \
-               --category=edge \
-               --scenario=Offline
+            {{ mlperf_inference_run_command(12, "resnet50", "reference", "edge", "Offline") }}
             ```
 
         === "SingleStream"
@@ -62,11 +58,7 @@ Get Official MLPerf ResNet50 Model
             Run Command
             
             ```bash
-            cm run script --tags=run-mlperf,inference \
-               --model=resnet50 \
-               --implementation=reference \
-               --category=edge \
-               --scenario=SingleStream
+            {{ mlperf_inference_run_command(12, "resnet50", "reference", "edge", "SingleStream") }}
             ```
 
         === "MultiStream"
@@ -74,21 +66,14 @@ Get Official MLPerf ResNet50 Model
             Run Command
             
             ```bash
-            cm run script --tags=run-mlperf,inference \
-               --model=resnet50 \
-               --implementation=reference \
-               --category=edge \
-               --scenario=MultiStream
+            {{ mlperf_inference_run_command(12, "resnet50", "reference", "edge", "MultiStream") }}
             ```
         === "All Scenarios"
             ##### All scenarios
             Run Command
             
             ```bash
-            cm run script --tags=run-mlperf,inference,_all-scenarios \
-               --model=resnet50 \
-               --implementation=reference \
-               --category=edge
+            {{ mlperf_inference_run_command(12, "resnet50", "reference", "edge", "All Scenarios") }}
             ```
 
     === "datacenter" 
@@ -100,11 +85,7 @@ Get Official MLPerf ResNet50 Model
             Run Command
 
             ```bash
-            cm run script --tags=run-mlperf,inference \
-               --model=resnet50 \
-               --implementation=reference \
-               --category=datacenter \
-               --scenario=Offline
+            {{ mlperf_inference_run_command(12, "resnet50", "reference", "datacenter", "Offline") }}
             ```
 
         === "Server"

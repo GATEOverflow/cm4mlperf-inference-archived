@@ -53,3 +53,9 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
+plugins:
+  - search
+  - macros
+extra:
+  cm_mlperf_inference_cmd: 'cm run script --tags=run-mlperf,inference '
+  cm_mlperf_inference_cmd_common_suffix: ' --quiet'
