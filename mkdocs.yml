@@ -5,8 +5,8 @@ theme:
   logo: img/logo_v2.svg
   favicon: img/logo_v2.svg
   palette:
-    primary: dark purple
-    accent: red
+    primary: deep purple
+    accent: green
   features:
     - content.tabs.link
     - content.code.copy
@@ -27,11 +27,17 @@ nav:
   - Benchmarks:
     - benchmarks/index.md
     - Image Classification:
-      - ResNet50: benchmarks/image_classification/resnet50/index.md
+      - ResNet50: benchmarks/image_classification/resnet50.md
     - Object Detection:
-      - RetinaNet: benchmarks/object_detection/retinanet/index.md
+      - RetinaNet: benchmarks/object_detection/retinanet.md
     - Medical Imaging:
-      - 3d-unet: benchmarks/medical_imaging/3d-unet/index.md
+      - 3d-unet: benchmarks/medical_imaging/3d-unet.md
+    - Speech Recognition:
+      - RNNT: benchmarks/speech_recognition/rnnt.md
+    - Language Processing:
+      - Bert-Large: benchmarks/language_processing/bert.md
+      - GPTJ-6B: benchmarks/language_processing/gptj.md
+      - LLAMA2-70B: benchmarks/language_processing/llama2.md
   - Demos:
     - demos/index.md
   - Release Notes:

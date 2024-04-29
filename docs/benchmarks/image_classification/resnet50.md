@@ -38,43 +38,120 @@ Get Official MLPerf ResNet50 Model
     ```
 
 ## Benchmark Implementations
-=== "Reference"
+=== "MLCommons-Python"
     ### MLPerf Reference Implementation in Python
 
     === "edge"
         #### Edge category
         In the edge category, ResNet50 has Offline, SingleStream, and MultiStream scenarios and all the scenarios are mandatory for a closed division submission.
 
-        === "Offline"
-            ##### Offline scenario
-            Run Command
+        === "CPU"
 
-            ```bash
-            {{ mlperf_inference_run_command(12, "resnet50", "reference", "edge", "Offline") }}
-            ```
+            ##### CPU
+            === "Offline"
+                ###### Offline scenario
+                Performance Estimation Command
 
-        === "SingleStream"
-            ##### SingleStream scenario
-            Run Command
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "Offline", "cpu", "test", "500") }}
+                ```
+                Actual Run Command
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "Offline", "cpu", "valid") }}
+                ```
+            === "SingleStream"
+                ###### SingleStream scenario
+                Run Command
             
-            ```bash
-            {{ mlperf_inference_run_command(12, "resnet50", "reference", "edge", "SingleStream") }}
-            ```
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "SingleStream", "cpu", "valid" ) }}
+                ```
 
-        === "MultiStream"
-            ##### MultiStream scenario
-            Run Command
+            === "MultiStream"
+                ###### MultiStream scenario
+                Run Command
             
-            ```bash
-            {{ mlperf_inference_run_command(12, "resnet50", "reference", "edge", "MultiStream") }}
-            ```
-        === "All Scenarios"
-            ##### All scenarios
-            Run Command
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "MultiStream", "cpu", "valid") }}
+                ```
+            === "All Scenarios"
+                ###### All scenarios
+                Run Command
             
-            ```bash
-            {{ mlperf_inference_run_command(12, "resnet50", "reference", "edge", "All Scenarios") }}
-            ```
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "All Scenarios", "cpu", "valid") }}
+                ```
+
+        === "CUDA"
+            ##### Nvidia GPU
+            === "Offline"
+                ###### Offline scenario
+                Performance Estimation Command
+
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "Offline", "cuda", "test", "200000") }}
+                ```
+                Actual Run Command
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "Offline", "cuda", "valid") }}
+                ```
+            === "SingleStream"
+                ###### SingleStream scenario
+                Run Command
+            
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "SingleStream", "cuda", "valid" ) }}
+                ```
+
+            === "MultiStream"
+                ###### MultiStream scenario
+                Run Command
+            
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "MultiStream", "cuda", "valid") }}
+                ```
+            === "All Scenarios"
+                ###### All scenarios
+                Run Command
+            
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "All Scenarios", "cuda", "valid") }}
+        === "ROCm"
+            ##### AMD GPU
+            === "Offline"
+                ###### Offline scenario
+                Performance Estimation Command
+
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "Offline", "rocm", "test", "50000") }}
+                ```
+                Actual Run Command
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "Offline", "rocm", "valid") }}
+                ```
+            === "SingleStream"
+                ###### SingleStream scenario
+                Run Command
+            
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "SingleStream", "rocm", "valid" ) }}
+                ```
+
+            === "MultiStream"
+                ###### MultiStream scenario
+                Run Command
+            
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "MultiStream", "rocm", "valid") }}
+                ```
+            === "All Scenarios"
+                ###### All scenarios
+                Run Command
+            
+                ```bash
+                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "All Scenarios", "rocm", "valid") }}
+                ```
+
 
     === "datacenter" 
         #### Datacenter category 
@@ -382,3 +459,76 @@ Get Official MLPerf ResNet50 Model
                --implementation=qualcomm \
                --category=datacenter
             ```
+
+=== "MLCommons-C++"
+    ### MLPerf Modular Implementation in C++
+
+    === "edge"
+        #### Edge category
+        In the edge category, ResNet50 has Offline, SingleStream, and MultiStream scenarios and all the scenarios are mandatory for a closed division submission.
+
+        === "Offline"
+            ##### Offline scenario
+            Run Command
+
+            ```bash
+            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "edge", "Offline") }}
+            ```
+
+        === "SingleStream"
+            ##### SingleStream scenario
+            Run Command
+            
+            ```bash
+            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "edge", "SingleStream") }}
+            ```
+
+        === "MultiStream"
+            ##### MultiStream scenario
+            Run Command
+            
+            ```bash
+            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "edge", "MultiStream") }}
+            ```
+        === "All Scenarios"
+            ##### All scenarios
+            Run Command
+            
+            ```bash
+            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "edge", "All Scenarios") }}
+            ```
+
+    === "datacenter" 
+        #### Datacenter category 
+        In the datacenter category, ResNet50 has Offline and Server scenarios and all the scenarios are mandatory for a closed division submission.
+        
+        === "Offline"
+            ##### Offline scenario
+            Run Command
+
+            ```bash
+            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "datacenter", "Offline") }}
+            ```
+
+        === "Server"
+            ##### Server scenario
+            Run Command
+            
+            ```bash
+            cm run script --tags=run-mlperf,inference \
+               --model=resnet50 \
+               --implementation=reference \
+               --category=datacenter \
+               --scenario=Server
+            ```
+        === "All scenarios"
+            ##### All scenarios
+            Run Command
+            
+            ```bash
+            cm run script --tags=run-mlperf,inference,_all-scenarios \
+               --model=resnet50 \
+               --implementation=reference \
+               --category=datacenter
+            ```
+
