@@ -23,10 +23,10 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.8"
+          python-version: "3.11"
 
       - name: Install Mkdocs
-        run: pip install mkdocs-material==9.1.4 swagger-markdown==0.9.16
+        run: pip install -r requirements.txt
 
       - name: Run Mkdocs deploy
         run: mkdocs gh-deploy --force
