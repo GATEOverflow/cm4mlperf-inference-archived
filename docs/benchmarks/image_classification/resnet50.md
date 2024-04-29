@@ -198,7 +198,7 @@ Get Official MLPerf ResNet50 Model
             === "CUDA"
                 ###### Nvidia GPU
                 === "Offline"
-                    ######## Offline scenario
+                    ####### Offline scenario
                     Performance Estimation Command
 
                     ```bash
