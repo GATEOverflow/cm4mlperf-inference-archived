@@ -45,112 +45,226 @@ Get Official MLPerf ResNet50 Model
         #### Edge category
         In the edge category, ResNet50 has Offline, SingleStream, and MultiStream scenarios and all the scenarios are mandatory for a closed division submission.
 
-        === "CPU"
+        === "Onnxruntime"
+            ##### Onnxruntime
+            === "CPU"
 
-            ##### CPU
-            === "Offline"
-                ###### Offline scenario
-                Performance Estimation Command
+                ###### CPU
+                === "Offline"
+                    ####### Offline scenario
+                    Performance Estimation Command
 
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "Offline", "cpu", "test", "500") }}
-                ```
-                Actual Run Command
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "Offline", "cpu", "valid") }}
-                ```
-            === "SingleStream"
-                ###### SingleStream scenario
-                Run Command
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "Offline", "cpu", "test", "500") }}
+                    ```
+                    Actual Run Command
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "Offline", "cpu", "valid") }}
+                    ```
+                === "SingleStream"
+                    ####### SingleStream scenario
+                    Run Command
             
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "SingleStream", "cpu", "valid" ) }}
-                ```
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "SingleStream", "cpu", "valid" ) }}
+                    ```
 
-            === "MultiStream"
-                ###### MultiStream scenario
-                Run Command
+                === "MultiStream"
+                    ####### MultiStream scenario
+                    Run Command
             
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "MultiStream", "cpu", "valid") }}
-                ```
-            === "All Scenarios"
-                ###### All scenarios
-                Run Command
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "MultiStream", "cpu", "valid") }}
+                    ```
+                === "All Scenarios"
+                    ####### All scenarios
+                    Run Command
             
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "All Scenarios", "cpu", "valid") }}
-                ```
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "All Scenarios", "cpu", "valid") }}
+                    ```
 
-        === "CUDA"
-            ##### Nvidia GPU
-            === "Offline"
-                ###### Offline scenario
-                Performance Estimation Command
+            === "CUDA"
+                ###### Nvidia GPU
+                === "Offline"
+                    ####### Offline scenario
+                    Performance Estimation Command
 
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "Offline", "cuda", "test", "200000") }}
-                ```
-                Actual Run Command
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "Offline", "cuda", "valid") }}
-                ```
-            === "SingleStream"
-                ###### SingleStream scenario
-                Run Command
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "Offline", "cuda", "test", "200000") }}
+                    ```
+                    Actual Run Command
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "Offline", "cuda", "valid") }}
+                    ```
+                === "SingleStream"
+                    ####### SingleStream scenario
+                    Run Command
             
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "SingleStream", "cuda", "valid" ) }}
-                ```
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "SingleStream", "cuda", "valid" ) }}
+                    ```
 
-            === "MultiStream"
-                ###### MultiStream scenario
-                Run Command
+                === "MultiStream"
+                    ####### MultiStream scenario
+                    Run Command
             
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "MultiStream", "cuda", "valid") }}
-                ```
-            === "All Scenarios"
-                ###### All scenarios
-                Run Command
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "MultiStream", "cuda", "valid") }}
+                    ```
+                === "All Scenarios"
+                    ####### All scenarios
+                    Run Command
             
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "All Scenarios", "cuda", "valid") }}
-        === "ROCm"
-            ##### AMD GPU
-            === "Offline"
-                ###### Offline scenario
-                Performance Estimation Command
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "All Scenarios", "cuda", "valid") }}
+                    ```
 
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "Offline", "rocm", "test", "50000") }}
-                ```
-                Actual Run Command
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "Offline", "rocm", "valid") }}
-                ```
-            === "SingleStream"
-                ###### SingleStream scenario
-                Run Command
-            
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "SingleStream", "rocm", "valid" ) }}
-                ```
+            === "ROCm"
+                ###### AMD GPU
+                === "Offline"
+                    ####### Offline scenario
+                    Performance Estimation Command
 
-            === "MultiStream"
-                ###### MultiStream scenario
-                Run Command
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "Offline", "rocm", "test", "50000") }}
+                    ```
+                    Actual Run Command
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "Offline", "rocm", "valid") }}
+                    ```
+                === "SingleStream"
+                    ####### SingleStream scenario
+                    Run Command
             
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "MultiStream", "rocm", "valid") }}
-                ```
-            === "All Scenarios"
-                ###### All scenarios
-                Run Command
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "SingleStream", "rocm", "valid" ) }}
+                    ```
+
+                === "MultiStream"
+                    ####### MultiStream scenario
+                    Run Command
             
-                ```bash
-                {{ mlperf_inference_run_command(16, "resnet50", "reference", "edge", "All Scenarios", "rocm", "valid") }}
-                ```
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "MultiStream", "rocm", "valid") }}
+                    ```
+                === "All Scenarios"
+                    ###### All scenarios
+                    Run Command
+            
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "onnxruntime", "edge", "All Scenarios", "rocm", "valid") }}
+                    ```
+
+        === "Tensorflow"
+            ##### Tensorflow
+            === "CPU"
+
+                ###### CPU
+                === "Offline"
+                    ####### Offline scenario
+                    Performance Estimation Command
+
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "Offline", "cpu", "test", "500") }}
+                    ```
+                    Actual Run Command
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "Offline", "cpu", "valid") }}
+                    ```
+                === "SingleStream"
+                    ####### SingleStream scenario
+                    Run Command
+            
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "SingleStream", "cpu", "valid" ) }}
+                    ```
+
+                === "MultiStream"
+                    ####### MultiStream scenario
+                    Run Command
+            
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "MultiStream", "cpu", "valid") }}
+                    ```
+                === "All Scenarios"
+                    ####### All scenarios
+                    Run Command
+            
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "All Scenarios", "cpu", "valid") }}
+                    ```
+
+            === "CUDA"
+                ###### Nvidia GPU
+                === "Offline"
+                    ######## Offline scenario
+                    Performance Estimation Command
+
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "Offline", "cuda", "test", "200000") }}
+                    ```
+                    Actual Run Command
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "Offline", "cuda", "valid") }}
+                    ```
+                === "SingleStream"
+                    ####### SingleStream scenario
+                    Run Command
+            
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "SingleStream", "cuda", "valid" ) }}
+                    ```
+
+                === "MultiStream"
+                    ####### MultiStream scenario
+                    Run Command
+            
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "MultiStream", "cuda", "valid") }}
+                    ```
+                === "All Scenarios"
+                    ####### All scenarios
+                    Run Command
+            
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "All Scenarios", "cuda", "valid") }}
+            === "ROCm"
+                ###### AMD GPU
+                === "Offline"
+                    ####### Offline scenario
+                    Performance Estimation Command
+
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "Offline", "rocm", "test", "50000") }}
+                    ```
+                    Actual Run Command
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "Offline", "rocm", "valid") }}
+                    ```
+                === "SingleStream"
+                    ####### SingleStream scenario
+                    Run Command
+            
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "SingleStream", "rocm", "valid" ) }}
+                    ```
+
+                === "MultiStream"
+                    ####### MultiStream scenario
+                    Run Command
+            
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "MultiStream", "rocm", "valid") }}
+                    ```
+                === "All Scenarios"
+                    ###### All scenarios
+                    Run Command
+            
+                    ```bash
+                    {{ mlperf_inference_run_command(20, "resnet50", "reference", "tensorflow", "edge", "All Scenarios", "rocm", "valid") }}
+                    ```
+
 
 
     === "datacenter" 
@@ -162,7 +276,7 @@ Get Official MLPerf ResNet50 Model
             Run Command
 
             ```bash
-            {{ mlperf_inference_run_command(12, "resnet50", "reference", "datacenter", "Offline") }}
+            {{ mlperf_inference_run_command(12, "resnet50", "reference", "tensorflow", "datacenter", "Offline") }}
             ```
 
         === "Server"
@@ -472,7 +586,7 @@ Get Official MLPerf ResNet50 Model
             Run Command
 
             ```bash
-            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "edge", "Offline") }}
+            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "onnxruntime", "edge", "Offline") }}
             ```
 
         === "SingleStream"
@@ -480,7 +594,7 @@ Get Official MLPerf ResNet50 Model
             Run Command
             
             ```bash
-            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "edge", "SingleStream") }}
+            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "onnxruntime", "edge", "SingleStream") }}
             ```
 
         === "MultiStream"
@@ -488,14 +602,14 @@ Get Official MLPerf ResNet50 Model
             Run Command
             
             ```bash
-            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "edge", "MultiStream") }}
+            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "onnxruntime", "edge", "MultiStream") }}
             ```
         === "All Scenarios"
             ##### All scenarios
             Run Command
             
             ```bash
-            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "edge", "All Scenarios") }}
+            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "onnxruntime", "edge", "All Scenarios") }}
             ```
 
     === "datacenter" 
@@ -507,7 +621,7 @@ Get Official MLPerf ResNet50 Model
             Run Command
 
             ```bash
-            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "datacenter", "Offline") }}
+            {{ mlperf_inference_run_command(12, "resnet50", "cpp", "onnxruntime", "datacenter", "Offline") }}
             ```
 
         === "Server"
