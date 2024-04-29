@@ -1,0 +1,55 @@
+site_name: CM for MLPerf Inference
+repo_url: https://github.com/mlcommons/ck
+theme:
+  name: material
+  logo: img/logo_v2.svg
+  favicon: img/logo_v2.svg
+  palette:
+    primary: dark purple
+    accent: red
+  features:
+    - content.tabs.link
+    - content.code.copy
+    - navigation.expand
+    - navigation.sections
+    - navigation.indexes
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - toc.follow
+nav:
+  - Inference:
+    - index.md
+  - Install:
+    - install/index.md
+    - Quick Start: install/quick-start.md
+  - Benchmarks:
+    - benchmarks/index.md
+    - Image Classification:
+      - ResNet50: benchmarks/image_classification/resnet50/index.md
+    - Object Detection:
+      - RetinaNet: benchmarks/object_detection/retinanet/index.md
+    - Medical Imaging:
+      - 3d-unet: benchmarks/medical_imaging/3d-unet/index.md
+  - Demos:
+    - demos/index.md
+  - Release Notes:
+    - What's New: changelog/index.md
+    - Changelog: changelog/changelog.md
+
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.details
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
