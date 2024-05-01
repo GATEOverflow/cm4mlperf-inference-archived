@@ -1,5 +1,5 @@
 site_name: CM for MLPerf Inference
-repo_url: https://github.com/mlcommons/ck
+repo_url: https://github.com/mlcommons/inference
 theme:
   name: material
   logo: img/logo_v2.svg
