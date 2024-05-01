@@ -24,14 +24,18 @@ The benchmark implementation run command will automatically download the validat
     ```
 
 ## Model
-The benchmark implementation run command will automatically download the required model and do the necessary conversions. In case you want to download only the official model, you can use the below commands.
-Get Official MLPerf ResNet50 Model
+The benchmark implementation run command will automatically download the required model and do the necessary conversions. In case you want to only download the official model, you can use the below commands.
+
+Get the Official MLPerf ResNet50 Model
+
 === "Tensorflow"
+
     ### Tensorflow
     ```
     cm run script --tags=get,ml-model,resnet50,_tensorflow -j
     ```
 === "Onnx"
+
     ### Onnx
     ```
     cm run script --tags=get,ml-model,resnet50,_onnx -j
