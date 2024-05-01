@@ -79,7 +79,7 @@ def define_env(env):
      pre_space += "  "
 
      if scenario == "All Scenarios":
-       scenario_variation_tag = ",_all_scenarios"
+       scenario_variation_tag = ",_all-scenarios"
        scenario_option = ""
      else:
        scenario_variation_tag = ""
